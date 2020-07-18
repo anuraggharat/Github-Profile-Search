@@ -6,6 +6,7 @@
 /out-tsc
 # Only exists if Bazel was run
 /bazel-out
+/src/environments/**
 
 # dependencies
 /node_modules
@@ -30,7 +31,6 @@ speed-measure-plugin*.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
-/enviroments
 # misc
 /.sass-cache
 /connect.lock
