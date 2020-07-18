@@ -30,7 +30,7 @@ export class SignupComponent implements OnInit {
     })
     .catch((err)=>{
       console.log(err.message);
-      this.toastr.error('Signup Failed')
+      this.toastr.error(err.message)
       
     })
 

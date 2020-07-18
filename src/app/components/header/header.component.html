@@ -1,4 +1,4 @@
-<nav class="navbar p-0 navbar-expand-sm navbar-dark bg-primary">
+<nav class="navbar p-0 navbar-expand-sm navbar-dark text-white bg-primary">
     <a class="navbar-brand" [routerLink]="['/']"  >
         <img src="../../../assets/icons8-github-150.png" alt="" class="logo" height="75px" width="75px" srcset="">
     </a>
@@ -6,9 +6,7 @@
 
     <div class="navbar-collapse">
         <div class="navbar-nav ml-auto">
-            <div *ngIf="email" class="navbar-text float-left">
-                {{email}}
-            </div>
+         
             <a [routerLink]=" ['/'] " class="nav-item nav-link" >Home</a>
             <a *ngIf="!email" [routerLink]=" ['/signin'] "  routerLinkActive="active"  class="nav-item nav-link">SignIn</a>
             <a *ngIf="!email" [routerLink]=" ['/signup'] " routerLinkActive="active" class="nav-item nav-link">SignUp</a>
