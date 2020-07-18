@@ -1,1 +1,25 @@
-<p>usercard works!</p>
+<div class="card user-card">
+    <div class="background bg-info">
+        <img [src]="user.avatar_url" alt="" srcset="" class="img-fluid rounded-circle profile-pic">
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">
+            {{user.name}}
+        </h5>
+        <p class="card-text">
+            {{user.blog}}
+        </p>
+        <p class="card-text">
+            {{user.company}}
+        </p>
+        <p class="card-text">
+            {{user.bio}}
+        </p>
+        <p class="card-text">
+            {{user.bio}}
+        </p>
+        <p class="card-text">
+            {{user.created_at | date:"short"}}
+        </p>
+    </div>
+</div>

@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container">
+    <div class="container">
+        <form 
+        (ngSubmit)="findUser()"
+        >
+            <div class="input-group mb-3">
+                <input 
+                type="text" 
+                class="form-control" 
+                [(ngModel)]="username"
+                name="username"
+                placeholder="GitHub username" 
+                aria-label="Recipient's username" 
+                aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary" type="submit" id="button-addon2">Find</button>
+                </div>
+              </div>
+        </form>
+    </div>
+    <div class="container">
+        <div *ngIf="Error" class="alert alert-danger">
+            <h2>{{Error}}</h2>
+        </div>
+    </div>
+    <div class="row " *ngIf="user">
+        <div class="col-lg-6">
+            <app-usercard  [user]="user" ></app-usercard>
+        </div>
+        <div class="col-lg-6">
+            <app-repos [repoUrl]="user.repos_url" ></app-repos>
+        </div>
+
+    </div>
+</div>
