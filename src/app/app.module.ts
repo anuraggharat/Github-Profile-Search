@@ -20,6 +20,10 @@ import { AngularFireModule } from '@angular/fire';
 //for toast
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HomeComponent } from './pages/home/home.component';
+import { SignupComponent } from './pages/signup/signup.component';
+import { SigninComponent } from './pages/signin/signin.component';
+import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 
 
@@ -30,7 +34,11 @@ import { ToastrModule } from 'ngx-toastr';
     HeaderComponent,
     FooterComponent,
     ReposComponent,
-    UsercardComponent
+    UsercardComponent,
+    HomeComponent,
+    SignupComponent,
+    SigninComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
