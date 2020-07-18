@@ -9,8 +9,8 @@
             <div *ngIf="email" class="navbar-text float-left">
                 {{email}}
             </div>
-            <a [routerLink]=" ['/'] " class="nav-item nav-link">Home</a>
-            <a *ngIf="!email" [routerLink]=" ['/signin'] "  routerLinkActive="navbar-active"  class="nav-item nav-link">SignIn</a>
+            <a [routerLink]=" ['/'] " class="nav-item nav-link" >Home</a>
+            <a *ngIf="!email" [routerLink]=" ['/signin'] "  routerLinkActive="active"  class="nav-item nav-link">SignIn</a>
             <a *ngIf="!email" [routerLink]=" ['/signup'] " routerLinkActive="active" class="nav-item nav-link">SignUp</a>
             <a *ngIf="email" (click)="handkeSignout()" class="nav-item nav-link">Logout</a>
         </div>

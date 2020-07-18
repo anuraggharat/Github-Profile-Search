@@ -1,25 +1,46 @@
-<div class="card user-card">
-    <div class="background bg-info">
-        <img [src]="user.avatar_url" alt="" srcset="" class="img-fluid rounded-circle profile-pic">
+<div class="card user-card pt-2 shadow-lg">
+    <div class="d-flex justify-content-center">
+        <img [src]="user.avatar_url" alt="" height="250px" width="250px" srcset="" class="img-fluid rounded-circle profile-pic">
     </div>
     <div class="card-body">
         <h5 class="card-title">
             {{user.name}}
         </h5>
-        <p class="card-text">
-            {{user.blog}}
+        <p class="card-text ">
+            <span class="text-black lead mr-3">UserName:</span>{{user.login}}
         </p>
         <p class="card-text">
-            {{user.company}}
+            <span class="text-black lead mr-3">Company:</span>{{user.company}}
         </p>
         <p class="card-text">
-            {{user.bio}}
+            <span class="text-black lead mr-3">Website:</span>{{user.blog}}
         </p>
         <p class="card-text">
-            {{user.bio}}
+            <span class="text-black lead mr-3">Location:</span>{{user.location}}
         </p>
+        
         <p class="card-text">
-            {{user.created_at | date:"short"}}
+            <span class="text-black lead mr-3">User Since:</span> {{user.created_at | date:"short"}}
         </p>
+    </div>
+    <div class="card-footer">
+        <div class="d-flex">
+            <div class="container">
+                <div class="row">
+                    <h4>Followers</h4>
+                </div>
+                <div class="row">
+                    <p>{{user.followers}}</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <h4>Following</h4>
+                </div>
+                <div class="row">
+                    <p>{{user.following}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
